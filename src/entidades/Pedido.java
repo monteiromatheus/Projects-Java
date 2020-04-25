@@ -13,10 +13,10 @@ import java.util.Date;
  * @author Matheus
  */
 public class Pedido {
-    
+
     private Integer id;
     private Date momento;
-    private StatusPedido status;  
+    private StatusPedido status;
 
     public Pedido(Integer id, Date momento, StatusPedido status) {
         this.id = id;
@@ -50,11 +50,7 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "Pedido{ id = "+id+", Momento = " + momento + ", Status = " +status+ " }";
+        return "Pedido{ id = " + id + ", Momento = " + momento + ", Status = " + status + " }";
     }
-    
-    
-    
-    
-}
 
+}
