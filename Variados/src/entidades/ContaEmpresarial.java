@@ -12,8 +12,8 @@ package entidades;
 public class ContaEmpresarial extends Conta {
 
     private Double limiteEmprestimo;
-    
-    public ContaEmpresarial(){
+
+    public ContaEmpresarial() {
         super();
     }
 
@@ -29,12 +29,12 @@ public class ContaEmpresarial extends Conta {
     public void setLimiteEmprestimo(Double limiteEmprestimo) {
         this.limiteEmprestimo = limiteEmprestimo;
     }
-    
-    public void Emprestimo(double valor){
-        
-        if(valor <= limiteEmprestimo){
+
+    public void Emprestimo(double valor) {
+
+        if (valor <= limiteEmprestimo) {
             Deposito(valor);
         }
-    }    
-    
+    }
+
 }
