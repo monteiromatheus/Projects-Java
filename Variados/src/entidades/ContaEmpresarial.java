@@ -17,7 +17,7 @@ public class ContaEmpresarial extends Conta {
         super();
     }
 
-    public ContaEmpresarial(Double limiteEmprestimo, Integer numero, String proprietario, Double saldo) {
+    public ContaEmpresarial(Integer numero, String proprietario, Double saldo,Double limiteEmprestimo) {
         super(numero, proprietario, saldo);
         this.limiteEmprestimo = limiteEmprestimo;
     }
@@ -33,8 +33,14 @@ public class ContaEmpresarial extends Conta {
     public void Emprestimo(double valor) {
 
         if (valor <= limiteEmprestimo) {
-            Deposito(valor);
+            saldo += valor - 10;
         }
+    }
+    
+    @Override
+    public final void Saque(double valor) {
+        super.Saque(valor);
+        saldo -= 2.0;
     }
 
 }

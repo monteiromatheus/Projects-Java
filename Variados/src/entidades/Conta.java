@@ -13,7 +13,7 @@ public class Conta {
 
     private Integer numero;
     private String proprietario;
-    private Double saldo;
+    protected Double saldo;
 
     public Conta() {
 
@@ -47,7 +47,7 @@ public class Conta {
 
     public void Saque(double valor) {
 
-        saldo -= valor;
+        saldo -= (valor + 5.0);
     }
 
     public void Deposito(double valor) {
