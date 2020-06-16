@@ -8,6 +8,8 @@ package aplicacao;
 import entidades.Conta;
 import entidades.ContaEmpresarial;
 import entidades.SalvaConta;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -42,7 +44,7 @@ public class ProgramacaoConta {
             SalvaConta acc5 = (SalvaConta) acc3;
             acc5.updateSaldo();
             System.out.println("Update!");
-        }*/
+        }
         
         Conta acc1 = new Conta(1001,"Alex", 1000.00);
         acc1.Saque(200.00);
@@ -55,6 +57,23 @@ public class ProgramacaoConta {
         Conta acc3 = new ContaEmpresarial(1003, "Maria", 1000.00, 500.00);
         acc3.Saque(200.00);
         System.out.println(acc3.getSaldo());
+        */
+        
+        List<Conta> list = new ArrayList<>();
+        
+        list.add(new ContaEmpresarial(1003, "Bob", 200.0, 200.0));
+        list.add(new SalvaConta(1002, "Maria", 1000.00, 0.01));
+        
+        double soma = 0.0;
+        
+        for(Conta acc : list){
+            
+            soma += acc.getSaldo();
+        }
+        
+        System.out.println("TOTAL: "+soma);
+        
+        
     }
 
 }
